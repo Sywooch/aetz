@@ -1,0 +1,178 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+}
+
+.wrap > .container {
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+.navbar{
+    margin-bottom: 0;
+}
+.navbar-inverse{
+    background: #424b55;
+    border-color: #424b55;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a{
+    color: #fff;
+}
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus{
+    background: #5c5f63;
+}
+.navbar{
+    border-radius: 0;
+}
+h1{
+    font-size: 22px;
+}
+.grid-view .summary {
+    text-align: right;
+}
+.redactor-editor{
+    border: 1px solid #d2d6de;
+}
+.img-control {
+    text-align: right;
+}
+.img-control a span.glyphicon-trash{
+    color: #f00000;
+}
+.img-control a{
+    display: inline-block;
+    padding: 5px;
+}
+.grid-view .glyphicon {
+    padding-left: 6px;
+}
+.nav-tabs-custom>.tab-content {
+    padding-top: 20px !important;
+}
+.wrap-btn{
+    padding: 0 2px 5px 2px;
+}
+.action-button-list{
+    padding: 2px;
+    overflow: hidden;
+}
+.action-button-list li{
+    float: left;
+    list-style: none;
+    margin-right: 2px;
+}
+.content-header>h1 {
+    font-size: 20px !important;
+}
+.navbar-nav>.user-menu>.dropdown-menu {
+    width: 200px !important;
+}
+/*.skin-blue .main-header .navbar {*/
+    /*background-color: #005830 !important;*/
+/*}*/
+
+/*.skin-blue .main-header .logo {*/
+    /*background-color: #004224 !important;*/
+/*}*/
+
+/*.skin-blue .sidebar-menu>li:hover>a, .skin-blue .sidebar-menu>li.active>a {*/
+    /*border-left-color: #005830 !important;*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
