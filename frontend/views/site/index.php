@@ -4,6 +4,9 @@ $this->title = 'АЭТЗ - Астанинский электротехничес
 use yii\helpers\Html;
 use yii\helpers\Url;
 use common\models\Text;
+$this->registerMetaTag(['name'=> 'title', 'content' =>  '']);
+$this->registerMetaTag(['name'=> 'keywords', 'content' =>  '']);
+$this->registerMetaTag(['name'=> 'description', 'content' => '']);
 ?>
 
 <main role="main">
@@ -13,7 +16,8 @@ use common\models\Text;
             <span>Перечень предоставляемых услуг</span>
         </div>
     </div>
-    <ul class="cr serv_ul">
+    <div class="cr">
+    <ul class="serv_ul">
         <?php foreach($services as $service) {?>
         <li>
             <div class="serv_text w_r">
@@ -32,6 +36,7 @@ use common\models\Text;
         </li>
         <?php } ?>
     </ul>
+    </div>
     <div class="line">
         <div class="cr">
             <div class="line_half l_bg">
@@ -50,7 +55,7 @@ use common\models\Text;
                     <div class="second-item">
                         <?php foreach($products as $product) {?>
                         <div>
-                            <p><?= $product->title ?></p>
+                            <a href="<?= Url::toRoute(['/product/index', 'slug' => $product->slug]) ?>"><?= $product->title ?></a>
                             <?php
                             echo \himiklab\thumbnail\EasyThumbnailImage::thumbnailImg(
                                 $product->imagePath, 320, 220, \himiklab\thumbnail\EasyThumbnailImage::THUMBNAIL_OUTBOUND,
@@ -72,23 +77,23 @@ use common\models\Text;
                 <span class="heading">Преимущество компании:</span>
                 <ul class="benf_ul">
                     <li>
-                        <img src="img/ben1.png">
+                        <div class="img"><img src="img/ben1.png"></div>
                         <span>Квалифицированный персонал</span>
                     </li>
                     <li>
-                        <img src="img/ben2.png">
+                        <div class="img"><img src="img/ben2.png"></div>
                         <span>Квалифицированный персонал</span>
                     </li>
                     <li>
-                        <img src="img/ben3.png">
+                        <div class="img"><img src="img/ben3.png"></div>
                         <span>Квалифицированный персонал</span>
                     </li>
                     <li>
-                        <img src="img/ben4.png">
+                        <div class="img"><img src="img/ben4.png"></div>
                         <span>Квалифицированный персонал</span>
                     </li>
                     <li>
-                        <img src="img/ben5.png">
+                        <div class="img"><img src="img/ben5.png"></div>
                         <span>Квалифицированный персонал</span>
                     </li>
                 </ul>

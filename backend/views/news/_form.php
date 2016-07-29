@@ -25,9 +25,6 @@ use yii\helpers\ArrayHelper;
             <li class="<?= ($image_tab) ? '' : 'active'?>">
                 <a href="#tab_1" data-toggle="tab">Данные</a>
             </li>
-            <li class="<?= ($image_tab) ? 'active' : ''?>">
-                <a href="#tab_2" data-toggle="tab">Изображении</a>
-            </li>
             <li class="pull-right">
                 <?= Html::submitButton($model->isNewRecord ?
                         '<span class="glyphicon glyphicon-plus"></span> '.Yii::t('app', 'Create') :
@@ -74,6 +71,8 @@ use yii\helpers\ArrayHelper;
                                 ],
                             ])
                         ?>
+
+                        <?= $form->field($model, 'meta_title')->textInput(['maxlength' => 255]) ?>
 
                         <?= $form->field($model, 'meta_keywords')->textarea(['rows' => 4]) ?>
 

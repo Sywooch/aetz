@@ -9,7 +9,15 @@ use yii\helpers\Url;
 <header>
     <div class="top_header">
         <div class="cr">
-            <button onclick="document.location='/search/index'" type="button"></button>
+            <div class="search_area">
+                <button type="button" class="search"></button>
+                <div class="s_part">
+                    <form id="search-form" action="/search/index" method="get" role="form">
+                        <input type="search" id="search-query" name="Search[query]" class="s_input" placeholder="Поиск...">
+                        <input onclick="document.getElementById('search-form').submit()" class="s_submit" type="submit" value="Найти">
+                    </form>             
+                </div>
+            </div>
             <span class="h_mail"><?= Text::getValue('email')?></span>
             <span class="h_phone"><?= Text::getValue('phone')?></span>
             <span class="h_adress"><?= Text::getValue('address')?></span>
@@ -23,9 +31,9 @@ use yii\helpers\Url;
                     <figcaption><span>Астанинский</span> электротехнический завод</figcaption>
                 </figure>
             </a>
-            <nav>
+            <nav class="m_menu">
                 <ul class="menu">
-                    <li>
+                    <li class="submenu">
                         <a href="javascript:void(0);">О компании </a>
                         <span>Инфо о нас</span>
                         <div class="under_li">
@@ -39,10 +47,13 @@ use yii\helpers\Url;
                                 <li>
                                     <a href="<?= Url::toRoute(['/article/partnery']) ?>">Партнеры</a>
                                 </li>
+                                <li>
+                                     <a href="<?= Url::toRoute(['/article/career']) ?>">Карьера</a>
+                                </li>
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="submenu">
                         <a href="javascript:void(0);">Услуги</a>
                         <span>Перечень услуг</span>
                         <div class="under_li">
@@ -67,14 +78,12 @@ use yii\helpers\Url;
                         <span>Наши клиенты</span>
                     </li>
                     <li>
-                        <a href="<?= Url::toRoute(['/article/career']) ?>">Карьера</a>
-                        <span>Вакансии</span>
-                    </li>
-                    <li>
                         <a href="<?= Url::toRoute(['/article/contacts']) ?>">Контакты</a>
                         <span>Обратная связь</span>
                     </li>
                 </ul>
+                <div class="mob_start"></div>
+                <div class="mob_close"></div>
             </nav>
         </div>
     </div>

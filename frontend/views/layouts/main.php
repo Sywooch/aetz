@@ -19,12 +19,13 @@ AppAsset::register($this);
 <body>
     <?php $this->beginBody() ?>
 
-    <div class="wrapper">
+    <div class="page_wrapper">
 
         <?= $this->render('/common/_header')?>
 
         <?= Alert::widget() ?>
         <?= $content?>
+        <div class="page_buffer"></div>
     </div>
 
     <?= $this->render('/common/_footer')?>

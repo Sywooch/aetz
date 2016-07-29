@@ -8,6 +8,8 @@ use \yii\widgets\Breadcrumbs;
 /* @var $this yii\web\View */
 $this->title = 'Каталог || АЭТЗ - Астанинский электротехнический завод';
 $this->params['breadcrumbs'][] = 'Каталог';
+$this->registerMetaTag(['name'=> 'title', 'content' =>  '']);
+$this->registerMetaTag(['name'=> 'keywords', 'content' =>  '']);
 $this->registerMetaTag(['name'=> 'description', 'content' => '']);
 ?>
 <main role="main">

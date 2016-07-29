@@ -11,6 +11,7 @@ use himiklab\thumbnail\EasyThumbnailImage;
 $this->title = 'Поиск по сайту';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <main role="main">
     <div class="bread_part">
         <?= \yii\widgets\Breadcrumbs::widget([
@@ -32,12 +33,12 @@ $this->params['breadcrumbs'][] = $this->title;
                     ]
                 ); ?>
 
-                <div class="">
-                    <div class="">
+                <div class="bigsearch_part">
+                    <div class="bigsearch_input">
                         <?= $form->field($model, 'query',['inputOptions' => ['class' => 'form-control search-text']])->textInput(['placeholder' => Yii::t('app', 'Search request'),'maxlength' => 75])->label(false) ?>
                     </div>
-                    <div class="">
-                        <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-default', 'name' => 'search-button']) ?>
+                    <div class="bigsearch_submit">
+                        <?= Html::submitButton(Yii::t('app', 'Search'), ['name' => 'search-button']) ?>
                     </div>
                 </div>
                 <?php ActiveForm::end(); ?>
@@ -45,11 +46,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <?php if((!$query == '') && !$queryWithTags){?>
                 <?php if($resulCount != 0){?>
-                    <h4 class="query-message result-message"><?= Yii::t('app', 'Results for:')?></h4>
-                    <span class="result-query"><?=$query ?></span>
+                    <h4 class="query-message result-message"><?= Yii::t('app', 'Results for:')?> <span class="result-query"><?=$query ?></span></h4>
                 <?php } else {?>
-                    <h4 class="query-message result-message"><?= Yii::t('app', 'On request')?></h4>
-                    <span class="result-query"><?=$query ?></span>
+                    <h4 class="query-message result-message"><?= Yii::t('app', 'On request')?> <span class="result-query"><?=$query ?></span></h4>
+
                     <h4 class="query-message result-message"><?= Yii::t('app', 'Nothing found')?> </h4>
                 <?php }?>
             <?php } else {?>
@@ -60,7 +60,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php if($articleList){?>
                     <div class="result-item-title"><?= Yii::t('app', 'Articles')?></div>
-                    <ul class="news_ul">
+                    <ul class="news_ul news-search">
                         <?php foreach($articleList as $article){?>
                             <li>
                                 <div class="news_mini">
@@ -80,7 +80,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 <?php if($productList){?>
                     <div class="result-item-title"><?= Yii::t('app', 'Products')?></div>
-                    <ul class="news_ul">
+                    <ul class="news_ul news-search">
                         <?php foreach($productList as $product){?>
                             <li>
                                 <div class="news_mini">
@@ -116,7 +116,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 
                 <?php if($newsList){?>
                     <div class="result-item-title"><?= Yii::t('app', 'News')?></div>
-                    <ul class="news_ul">
+                    <ul class="news_ul news-search">
                     <?php foreach($newsList as $news){?>
                         <li>
                             <div class="news_mini">

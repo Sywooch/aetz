@@ -9,6 +9,7 @@ use yii\widgets\ListView;
 $this->title = 'Новости || АЭТЗ - Астанинский электротехнический завод';
 
 $this->params['breadcrumbs'][] = 'Новости';
+$this->registerMetaTag(['name'=> 'title', 'content' =>  '']);
 $this->registerMetaTag(['name'=> 'keywords', 'content' =>  '']);
 $this->registerMetaTag(['name'=> 'description', 'content' => '']);
 
